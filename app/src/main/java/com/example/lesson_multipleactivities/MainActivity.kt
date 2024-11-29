@@ -1,4 +1,3 @@
-// MainActivity.kt
 package com.example.lesson_multipleactivities
 
 import android.content.Intent
