@@ -8,7 +8,7 @@ import com.example.lesson_multipleactivities.databinding.ActivitySecondBinding
 
 // Класс второй активности
 class SecondActivity : AppCompatActivity() {
-    // Binding для MainActivity
+    // Binding для SecondActivity
     private lateinit var secondBinding: ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
