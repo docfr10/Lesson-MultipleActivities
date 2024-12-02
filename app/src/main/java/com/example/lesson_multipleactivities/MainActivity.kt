@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
                 // Отображение ответа в TextView
                 mainBinding.textView2.text = "Ответ: $reply"
             }
+            else
+                mainBinding.textView2.text = "Поле для ввода текста было пустым!"
         }
 
     // Binding для MainActivity

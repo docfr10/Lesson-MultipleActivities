@@ -30,7 +30,10 @@ class SecondActivity : AppCompatActivity() {
             val replyIntent = Intent()
             replyIntent.putExtra("EXTRA_REPLY", reply)
             // Отправка резульата обратно в MainActivity
-            setResult(Activity.RESULT_OK, replyIntent)
+            if (secondBinding.editText.text.isNotEmpty())
+                setResult(Activity.RESULT_OK, replyIntent)
+            else
+                setResult(Activity.RESULT_CANCELED, replyIntent)
             // Закрытие текущей активности
             finish()
         }
