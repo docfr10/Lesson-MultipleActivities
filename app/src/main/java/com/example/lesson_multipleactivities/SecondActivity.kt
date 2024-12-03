@@ -3,6 +3,7 @@ package com.example.lesson_multipleactivities
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lesson_multipleactivities.databinding.ActivitySecondBinding
 
@@ -13,6 +14,8 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Log.i("Activity 2", "onCreate")
 
         secondBinding = ActivitySecondBinding.inflate(layoutInflater)
 
@@ -37,5 +40,20 @@ class SecondActivity : AppCompatActivity() {
             // Закрытие текущей активности
             finish()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("Activity 2", "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("Activity 2", "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("Activity 2", "onDestroy")
     }
 }

@@ -2,6 +2,7 @@ package com.example.lesson_multipleactivities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lesson_multipleactivities.databinding.ActivityMainBinding
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        Log.i("Activity 1", "onCreate")
+
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(mainBinding.root)
@@ -43,5 +46,20 @@ class MainActivity : AppCompatActivity() {
             // Использование startForResult для запуска активности и получения результата
             startForResult.launch(intent)
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("Activity 1", "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("Activity 1", "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("Activity 1", "onDestroy")
     }
 }
